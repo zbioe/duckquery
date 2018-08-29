@@ -1,25 +1,24 @@
 # DUCKQUERY
 
-## INPUT 
+## USAGE
 
-### EXAMPLE
+### Example
 ```
-{
-	"query": "EDUARDO CAMPOS"
+package main
+
+import (
+	"fmt"
+	"encoding/json"
+	"github.com/iuryfukuda/duckquery"
+)
+
+func main() {
+	o := duckquery.Query("Eduardo Campos")
+	b, _ := json.Marshal(o)
+	fmt.Printf("Output:%s", b)
 }
-```
-
-### SCHEMA
 
 ```
-{
-	"query": {
-		"type": "string",
-		"required": true
-	}
-}
-```
-
 
 ## OUTPUT 
 
