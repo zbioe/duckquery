@@ -11,11 +11,11 @@ type Label struct {
 	Value	string
 }
 
-func Query(s string) Output {
+func Query(s string) (Output, error) {
 	var o Output
 	ao, err := Request(s)
 	if err != nil {
-		panic(err)
+		return o, err
 	}
 	o.Abstract = ao.Abstract
 	for _, t := range ao.RelatedTopics {
@@ -26,5 +26,5 @@ func Query(s string) Output {
 			o.Labels = append(o.Labels, l)
 		}
 	}
-	return o
+	return o, nil
 }

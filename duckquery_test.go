@@ -8,7 +8,10 @@ import (
 )
 
 func TestDuckquery(t *testing.T) {
-	o := duckquery.Query("Eduardo Campos")
+	o, err := duckquery.Query("Eduardo Campos")
+	if err != nil {
+		t.Fatalf("want nil, got: %s", err)
+	}
 	if len(o.Labels) == 0 {
 		t.Fatal("not find any labels")
 	}
