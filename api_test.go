@@ -4,7 +4,7 @@ import (
 	"testing"
 	"bytes"
 	"encoding/json"
-	"github.com/iuryfukuda/duckquery"
+	"github.com/zbioe/duckquery"
 )
 
 func TestApi(t *testing.T) {

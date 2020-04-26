@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"log"
 	"encoding/json"
-	"github.com/iuryfukuda/duckquery"
+	"github.com/zbioe/duckquery"
 )
 
 
